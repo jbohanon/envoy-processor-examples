@@ -44,6 +44,8 @@ func (s *processorService) Process(stream extproc.ExternalProcessor_ProcessServe
 		logger.Errorf("Error receiving from stream: %s", err)
 		return err
 	}
+	// Do nothing at all
+	return nil
 
 	logger.Debug("First message: %b", msg)
 	headers := msg.GetRequestHeaders()
